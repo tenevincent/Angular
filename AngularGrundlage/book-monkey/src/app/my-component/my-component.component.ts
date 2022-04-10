@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Person }  from '../person';
+import { IDemoService, MY_TOKEN } from '../services/idemo-service';
+import { Inject } from '@angular/core';
 
 
 @Component({
@@ -11,10 +13,13 @@ export class MyComponentComponent implements OnInit {
 
   public person : Person ;
 
-  constructor() {
+  constructor(private demoService: IDemoService, @Inject(MY_TOKEN) token: string ) {
     this.person = new Person();
     this.person.name = "Vincent Tene";
 
+    demoService.display()
+
+    console.log(token);
   }
 
   ngOnInit(): void {
