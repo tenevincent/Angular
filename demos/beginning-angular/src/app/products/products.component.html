@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+<!--
+
+
+<h1>{{title}}</h1>
+
+<div>
+<img src="{{imageUrl}}" />
+<img bind-src="imageUrl" />
+
+</div>
+
+  <div>
+  <button class="btn btn-primary" [class.disabled]="isActive">Submit</button>
+</div>
+
+
+<div>
+  <button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue':'gray'">Submit</button>
+</div>
+
+<div>
+   <button class="btn btn-success" (click)="onClick($event)">Change event</button>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="title" />
+   <br>
+   You have typed: {{title}}
+</div>
+-->
+
+<rating></rating>
+
+<ul>
+  <li *ngFor="let product of products">
+  {{product}}
+  </li>
+  </ul>
+
+

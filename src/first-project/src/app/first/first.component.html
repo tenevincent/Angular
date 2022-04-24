@@ -1,0 +1,34 @@
+
+
+<div class="container-fluid">
+  <p>Two ways binding</p>
+  <input class="form-control" [(ngModel)]="name" type="text">
+<br>
+<p>You enter {{name}}</p>
+</div>
+
+
+<div>
+
+  <ul>
+    <li *ngFor="let name of fruits">{{ name }}</li>
+    </ul>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let name of fruits; index as i">
+    {{ i + 1 }}. {{ name }}
+    </li>
+    </ul>
+</div>
+
+
+<div class="text-success" [ngSwitch]="angularVersion">
+  <span *ngSwitchCase="1">AngularJS</span>
+  <span *ngSwitchCase="3">Angular 3 existiert nicht</span>
+  <span *ngSwitchDefault>Angular {{ angularVersion }}</span>
+  </div>
+
+  <p>{{ version | lowercase | uppercase }}</p>
+
